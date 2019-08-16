@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,49 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/Temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Temperature"
+        android:padding="20dp"
+        android:layout_marginTop="120dp"
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="115dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/Temp"
+        android:layout_marginTop="120dp"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textSize="36sp"
+        android:padding="20dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <TextView
+        android:id="@+id/Humid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Temp"
+        android:text="Humidity"
+        android:textSize="36sp"
+        android:padding="20dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="400dp" />
+
+    <TextView
+        android:id="@+id/humid"
+        android:layout_toRightOf="@id/Humid"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/temp"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="..."
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="496dp" />
+
+</RelativeLayout>
